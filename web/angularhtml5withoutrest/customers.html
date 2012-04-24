@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://code.angularjs.org/angular-1.0.0rc6.min.js"></script>
+    <script src="customer.js"></script>
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="customer.css">
+  </head>
+  <body>
+    <h2>Customer Data 
+	</h2>
+    <div ng-controller="CustomerCtrl">
+		<div>
+       	 <form class = "well form-search" ng-submit="lookupCustomer()"> 
+ 			<label> Search by ID</label>
+	        <input type="text" ng-model="id" class="input-medium search-query" size="10" placeholder="customer #">
+
+	        <button type="submit" class="btn btn-primary" ng-click = "lookupCustomer()" ng-model-instant> 
+				<a class = "icon-search"></a>
+			</button>
+	      </form> </div>
+	
+   
+		<form class = "form-horizontal" ng-submit = "updateCustomer">
+			<fieldset>
+				
+				
+			 <legend>	
+				 <span class="customer-visible-{{!isCustomerLoaded()}}">   
+					Create New Customer
+				 </span>
+				 <span class="customer-visible-{{isCustomerLoaded()}}">   
+			Update	{{customer.firstName}} {{customer.lastName}} -  {{customer.id}} </span>  
+				</legend>
+			
+					<div class="control-group">
+					      <label class="control-label" for="input02">First Name:</label>
+					      <div class="controls">
+							<input class="input-xlarge" type = "text" ng-model = "customer.firstName" placeholder = "first name"/> 
+					        <p class="help-block">Change the first name</p>
+					      </div>
+					    </div>		
+		 
+		 	
+			<div class="control-group">
+			      <label class="control-label" for="input01">Last Name:</label>
+			      <div class="controls">
+					<input class="input-xlarge" type = "text" ng-model = "customer.lastName" placeholder = "last name"/> 
+			        <p class="help-block">Change the last name</p>
+			      </div>
+			    </div>
+			
+		
+			
+			
+			 	 <div class="form-actions">
+				            <button type="submit" class="btn btn-primary" ng-click = "save()" ng-model-instant> 
+								<a class = "icon-plus"></a> Save 
+							</button>
+				            <button class="btn " ng-click = "trash()">	<a class = "icon-trash"></a> Cancel  </button>
+				          </div>
+ 	 
+						</fieldset>      
+		</form>
+
+     
+    </div> 
+
+
+
+	 
+  </body>
+</html>
+
+
