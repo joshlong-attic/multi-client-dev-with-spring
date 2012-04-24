@@ -8,8 +8,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>core-services</module>
-         <module>web</module>
-        <module>android</module>
+         <module>web</module> 
+<!--        <module>android</module> -->
      </modules>
     <properties>
         <java.version>1.6</java.version>
