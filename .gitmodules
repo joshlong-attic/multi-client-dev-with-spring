@@ -1,0 +1,6 @@
+[submodule "a-walking-tour-of-all-of-springdom"]
+	path = a-walking-tour-of-all-of-springdom
+	url = ./a-walking-tour-of-all-of-springdom/
+[submodule "cloudfoundry-springmvc-template"]
+	path = cloudfoundry-springmvc-template
+	url = ./cloudfoundry-springmvc-template/
